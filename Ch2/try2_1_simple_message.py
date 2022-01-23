@@ -1,0 +1,2 @@
+msg = "pppoopoo"
+print (msg)
