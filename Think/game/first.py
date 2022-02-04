@@ -3,6 +3,7 @@ import time
 
 colors = [(0, 0, 0), (250, 250, 250)]
 
+
 class QueenSprite:
     def __init__(self, img, position):
         self.img = img
@@ -56,6 +57,8 @@ def main():
 
         if event.type == pygame.KEYDOWN:
             key = event.dict["key"]
+            current_pox = all_sprites[0].position[0]
+            current_poy = all_sprites[0].position[1]
 
             if key == 27:
                 break
@@ -68,6 +71,18 @@ def main():
                 colors[0] = (0, 0, 255)
             elif key == ord("p"):
                 colors[0] = (0, 0, 0)
+            elif key == ord("d"):
+                current_pox = current_pox + grid_size
+                all_sprites[0].position = (current_pox, current_poy)
+            elif key == ord("a"):
+                current_pox = current_pox - grid_size
+                all_sprites[0].position = (current_pox, current_poy)
+            elif key == ord("s"):
+                current_poy = current_poy + grid_size
+                all_sprites[0].position = (current_pox, current_poy)
+            elif key == ord("w"):
+                current_poy = current_poy - grid_size
+                all_sprites[0].position = (current_pox, current_poy)
 
         if event.type == pygame.MOUSEBUTTONDOWN:
             pos_mouse = event.dict["pos"]
@@ -83,7 +98,7 @@ def main():
 
         draw_chessboard(main_surface, 8, grid_size)  # calling of the chessboardF
 
-        #main_surface.blit(queen, (3 * grid_size, 3 * grid_size))  # prints out the queen, inside () is the position
+        # main_surface.blit(queen, (3 * grid_size, 3 * grid_size))  # prints out the queen, inside () is the position
 
         the_text = my_font.render("Frame = {0}, rate = {1:.2f} fps".format(frame_count, frame_rate), True, (0, 250, 0))
         main_surface.blit(the_text, (10, 10))
