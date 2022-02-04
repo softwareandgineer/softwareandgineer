@@ -35,4 +35,20 @@ def find_letters(wrd, x, loc=0):
     return start
 
 
-print(find_letters("banana", "n"))
+print(find_letters("cheeses", "s"))
+
+#----------------------------------------------
+
+
+def analyse_string(st):
+    sct = 0
+    for i in st:
+        if i == " ":
+            sct += 1
+    return sct + 1
+            
+
+print(analyse_string('banana pp pp'))
+
+
+
