@@ -30,7 +30,6 @@ Sample Output
 Natalie
 
 """
-import wc as wc
 
 C = int(input())
 mc = 0
