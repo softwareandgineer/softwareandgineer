@@ -1,5 +1,4 @@
 """
-
 Natalie is learning to count on her fingers. When her Daddy tells her a number n(1 <= n <= 10) , she asks "What is ,
 Daddy?", by which she means "How many fingers should I hold up on each hand so that the total is n?"
 
@@ -56,4 +55,6 @@ if 0 <= e <= 5:
         i += 1
 
 print(i)
+
+
 

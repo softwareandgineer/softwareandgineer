@@ -32,8 +32,29 @@ Sample Output
     *
 
 """
-h = 0
-spc = 0
-length = 0
+h = int(input())
+spc = int(input())
+length = int(input())
+
+for i in range(h):
+    print("*", end='')
+    for y in range(spc):
+        print(" ", end='')
+    print("*", end='')
+    for y in range(spc):
+        print(" ", end='')
+    print("*", end='')
+    print('')
+for x in range(3 + 2 * spc):
+    print("*", end='')
+print("")
+for z in range(length):
+    for c in range(0, 1 + spc):
+        print(" ", end='')
+    print("*")
+
+
+
+
 
 
