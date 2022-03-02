@@ -53,8 +53,3 @@ for z in range(length):
         print(" ", end='')
     print("*")
 
-
-
-
-
-
